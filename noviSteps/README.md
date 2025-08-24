@@ -35,3 +35,24 @@ func main() {
 }
 
 ```
+
+- Scan
+  - 不要なdataに入れるためだけの変数はいらない
+
+```
+	var N, c int
+
+	fmt.Scan(&N)
+
+	data := make([]int, N)
+
+	for i := 0; i < N; i++ {
+		fmt.Scan(&data[i])
+	}
+```
+
+### sort
+
+sort.Slice
+
+Ordinary Number
