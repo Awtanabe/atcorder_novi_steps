@@ -29,16 +29,18 @@ func main() {
 	}
 
 	// 色→価格の対応表を作る
-	price := make(map[string]int)
+	colorPriceMap := make(map[string]int)
 	for i := 0; i < M; i++ {
-		price[D[i]] = P[i+1] // D[i] の価格は P[i+1]
+		colorPriceMap[D[i]] = P[i+1] // D[i] の価格は P[i+1]
 	}
 
 	// 合計計算
 	total := 0
+	// Cは食べた皿の色
 	for _, color := range C {
-		if v, ok := price[color]; ok {
-			total += v
+		// color priceのmap
+		if price, ok := colorPriceMap[color]; ok {
+			total += price
 		} else {
 			total += P[0] // デフォルト価格
 		}
