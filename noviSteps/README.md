@@ -82,3 +82,7 @@ type Empty struct{}
 Empty{}している => ⭐️無名のフィールドを持たない構造体の初期化
 ```
 
+#### mapの使い方 Default Price
+
+- Default Priceで color: priceでmapを作成し、color(食べたもの)でループして合計金額を合算していく
+
