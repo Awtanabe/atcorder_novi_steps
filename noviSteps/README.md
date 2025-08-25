@@ -56,3 +56,29 @@ func main() {
 sort.Slice
 
 Ordinary Number
+
+
+### map
+
+- mapをfor ループする時に順序が保証されないので厄介
+
+- mapの初期化 make
+
+- setはmapで表現する
+
+```
+set := make(map[string]struct{})
+set["apple"] = struct{}{}
+set["banana"] = struct{}{}
+```
+
+- struct{}{}
+  - struct{}は「フィールドなし構造体型」
+  - struct{}{}を初期化
+
+```
+type Empty struct{}
+
+Empty{}している => ⭐️無名のフィールドを持たない構造体の初期化
+```
+
