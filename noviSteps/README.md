@@ -26,6 +26,9 @@ https://kenkoooo.com/atcoder/#/table/
 
 https://note.com/jikky1618/n/n3298c09633dc
 
+### 緑になるために必要なアルゴリズム
+
+https://note.com/jikky1618/n/n0814c5803391
 
 #### 水色に
 https://qiita.com/_ken_/items/c32d4b2e680058abd77a
