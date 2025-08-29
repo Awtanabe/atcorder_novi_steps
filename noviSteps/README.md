@@ -22,7 +22,7 @@ https://kenkoooo.com/atcoder/#/table/
 
 ### atcorder系の記事
 
-### 
+### 水色に
 
 https://note.com/jikky1618/n/n3298c09633dc
 
