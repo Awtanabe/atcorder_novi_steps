@@ -1,6 +1,42 @@
+### 前提
+
+- 茶色・緑・水色
+- 緑になるには
+  - 「3完」がほぼ確実で、「4完」は問題を解き終わっている数か！
+    - C~Dの問題を解けるようになることか
+- 水色
+  - 「4完」を8〜9割以上の確率で、そして「5完」を3〜4割以上の確率
+    - Eの問題まで解けるようになるか
+
 ### 教材
 
+- novistep
 https://atcoder-novisteps.vercel.app/workbooks
+
+- abc problems
+
+https://kenkoooo.com/atcoder/#/table/
+
+- 凡人が緑になる 50問 kindle
+
+
+### atcorder系の記事
+
+### 
+
+https://note.com/jikky1618/n/n3298c09633dc
+
+
+#### 水色に
+https://qiita.com/_ken_/items/c32d4b2e680058abd77a
+
+- 水色 アルゴリズムのレベル
+  - https://qiita.com/_ken_/items/c32d4b2e680058abd77a#%E3%81%93%E3%81%AE%E3%81%93%E3%82%8D%E3%81%AB%E8%A6%9A%E3%81%88%E3%81%9F%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0-2
+
+- 緑
+  - https://qiita.com/_ken_/items/c32d4b2e680058abd77a#%E3%81%93%E3%81%AE%E3%81%93%E3%82%8D%E3%81%AB%E8%A6%9A%E3%81%88%E3%81%9F%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0-1
+
+### 
 
 ### メモ
 
