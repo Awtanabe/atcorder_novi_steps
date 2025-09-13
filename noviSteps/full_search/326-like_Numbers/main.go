@@ -22,3 +22,31 @@ func main() {
 		}
 	}
 }
+
+// package main
+
+// import "fmt"
+
+// func isValid(n int) bool {
+// 	tmp := make([]int, 3)
+// 	for i := 0; i < 3; i++ {
+// 		tmp[i] = n % 10
+// 		n = n / 10
+// 	}
+
+// 	return tmp[2]*tmp[1] == tmp[0]
+// }
+
+// func main() {
+// 	var N int
+
+// 	fmt.Scan(&N)
+
+// 	for {
+// 		if isValid(N) {
+// 			fmt.Print(N)
+// 			break
+// 		}
+// 		N += 1
+// 	}
+// }

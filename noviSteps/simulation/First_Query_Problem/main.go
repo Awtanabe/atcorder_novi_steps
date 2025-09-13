@@ -7,33 +7,20 @@ import (
 )
 
 func main() {
-	in := bufio.NewReader(os.Stdin)
-	out := bufio.NewWriter(os.Stdout)
-	defer out.Flush()
 
-	var N int
-	fmt.Fscan(in, &N)
+	scanner := bufio.NewScanner(os.Stdin)
 
-	A := make([]int64, N)
-	for i := 0; i < N; i++ {
-		fmt.Fscan(in, &A[i])
+	if scanner.Scan() {
+		text := scanner.Text()
+		// fmt.Println(text)
+
+		for i := range text {
+			fmt.Println(string(text[i]))
+			fmt.Println("===")
+		}
 	}
 
-	var Q int
-	fmt.Fscan(in, &Q)
-
-	for i := 0; i < Q; i++ {
-		var t int
-		fmt.Fscan(in, &t)
-		if t == 1 {
-			var k int
-			var x int64
-			fmt.Fscan(in, &k, &x)
-			A[k-1] = x
-		} else { // t == 2
-			var k int
-			fmt.Fscan(in, &k)
-			fmt.Fprintln(out, A[k-1])
-		}
+	if err := scanner.Err(); err != nil {
+		fmt.Fprintln(os.Stderr, "読み取りエラー:", err)
 	}
 }
