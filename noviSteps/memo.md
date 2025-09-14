@@ -13,12 +13,51 @@
 - [x] 二次元グリット 2
 - [x] シミュレーショ3
 - [] スタック
+  - スライスで表現できたはず
+	  - インデックス指定じゃなくてappendで追加できるみたい
 - [] キュー
+  - キューもスタックと使うものは同じs
 - [] 再帰関数
 - [] スタック DP高速化
 - [] 貪欲法
+  - 効率良い選択をすること
+	  - 大きい順に並べた方が良いとか
 - [] 再帰全探索
 - [x] Frequency
+
+### スタック
+
+- appendで追加できる
+- 取り除く
+  - data[1:] 
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	data := []int{1}
+	fmt.Println("Hello, 世界", data)
+	data = append(data, 2, 3, 4)
+	fmt.Println("Hello, 世界", data)
+	data = data[1:]
+	fmt.Println("Hello, 世界", data)
+}
+
+Hello, 世界 [1]
+Hello, 世界 [1 2 3 4]
+Hello, 世界 [2 3 4]
+```
+
+### Aggregate
+
+- 集約 解き方
+  - バケットとは
+	  - スライスのこと
+		  - var buckect [10]int
+  - バケットに状態を記録してカウントs
+
 
 ### 2025/08/30
 

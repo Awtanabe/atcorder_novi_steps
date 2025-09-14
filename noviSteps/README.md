@@ -201,6 +201,16 @@ Empty{}している => ⭐️無名のフィールドを持たない構造体の
 
 https://qiita.com/ryuken/items/6ef4a33fa5ad4819af85
 
+### 解法 パターン
+
+- 全探索
+  - for ループ
+    - ループの抜け方
+      - returnをうまく使ったり
+
+- バケット or mapでの
+
+
 ### 問題
 
 #### Pasta
