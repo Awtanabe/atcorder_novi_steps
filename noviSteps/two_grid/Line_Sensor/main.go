@@ -1,47 +1,3 @@
-package main
-
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
-
-func main() {
-	in := bufio.NewReader(os.Stdin)
-
-	var H, W int
-	fmt.Fscan(in, &H, &W)
-
-	// 2次元配列（byte のグリッド）
-	grid := make([][]byte, H)
-	for i := 0; i < H; i++ {
-		var line string
-		fmt.Fscan(in, &line)   // 1行まるごと読む（長さは W のはず）
-		grid[i] = []byte(line) // []byte にして保持（各セル: '.' or '#')
-		// 必要なら長さチェック
-		// if len(grid[i]) != W { panic("invalid width") }
-	}
-
-	// 列ごとにカウント
-	cnt := make([]int, W)
-	for j := 0; j < W; j++ {
-		for i := 0; i < H; i++ {
-			if grid[i][j] == '#' {
-				cnt[j]++
-			}
-		}
-	}
-
-	// 出力
-	for j := 0; j < W; j++ {
-		if j > 0 {
-			fmt.Print(" ")
-		}
-		fmt.Print(cnt[j])
-	}
-	fmt.Println()
-}
-
 // package main
 
 // import (
@@ -77,3 +33,35 @@ func main() {
 // 	}
 // 	fmt.Println()
 // }
+
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	var H, W int
+
+	fmt.Scan(&H, &W)
+
+	data := make([]string, H)
+	scanner := bufio.NewScanner(os.Stdin)
+
+	for i := 0; i < H; i++ {
+		scanner.Scan()
+		data[i] = scanner.Text()
+	}
+
+	for i := 0; i < W; i++ {
+		c := 0
+		for j := 0; j < H; j++ {
+			if data[j][i] == '#' {
+				c++
+			}
+		}
+		fmt.Print(c, " ")
+	}
+}

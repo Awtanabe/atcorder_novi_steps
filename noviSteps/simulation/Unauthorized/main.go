@@ -1,36 +1,67 @@
+// package main
+
+// import (
+// 	"bufio"
+// 	"fmt"
+// 	"os"
+// )
+
+// func main() {
+// 	in := bufio.NewReader(os.Stdin)
+
+// 	var N int
+// 	fmt.Fscan(in, &N)
+
+// 	loggedIn := false
+// 	errors := 0
+
+// 	for i := 0; i < N; i++ {
+// 		var s string
+// 		fmt.Fscan(in, &s)
+
+// 		switch s {
+// 		case "login":
+// 			loggedIn = true
+// 		case "logout":
+// 			loggedIn = false
+// 		case "public":
+// 			// 何もしない
+// 		case "private":
+// 			if !loggedIn {
+// 				errors++
+// 			}
+// 		}
+// 	}
+// 	fmt.Println(errors)
+// }
+
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	in := bufio.NewReader(os.Stdin)
-
 	var N int
-	fmt.Fscan(in, &N)
+	status := false
 
-	loggedIn := false
-	errors := 0
-
+	fmt.Scan(&N)
+	actives := make([]string, N)
 	for i := 0; i < N; i++ {
-		var s string
-		fmt.Fscan(in, &s)
+		fmt.Scan(&actives[i])
+	}
 
-		switch s {
+	c := 0
+
+	for i := range actives {
+		switch actives[i] {
 		case "login":
-			loggedIn = true
+			status = true
 		case "logout":
-			loggedIn = false
-		case "public":
-			// 何もしない
+			status = false
 		case "private":
-			if !loggedIn {
-				errors++
+			if !status {
+				c++
 			}
 		}
 	}
-	fmt.Println(errors)
+	fmt.Print(c)
 }

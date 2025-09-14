@@ -48,7 +48,9 @@ https://qiita.com/_ken_/items/c32d4b2e680058abd77a
 
 ### 全体メモ
 
-fmt.Scanの使い方
+#### 入力の扱い
+
+- 1. fmt.Scanの使い方
 
 
 ```
@@ -88,6 +90,66 @@ func main() {
 	for i := 0; i < N; i++ {
 		fmt.Scan(&data[i])
 	}
+```
+
+- 2. Scanner
+
+- 使い方
+  - 初期化
+  - Scan
+  - Text
+- Line Sensor
+  - https://atcoder.jp/contests/abc274/tasks/abc274_b
+  - 文字列の配列の場合は自動的に多次元配列になるな
+    - []string
+      - string自体が配列だし
+
+### switch
+
+- Unauthorizedでswitch使った
+  - ⭐️行動パターンが分かってる時はswitchが良い
+
+### 二次元グリット
+
+- ポイント
+  - 文字列か数字の二次元グリットかで初期化がわる
+
+- 文字列
+  - []string
+    - string 自体が文字配列
+
+```go
+data := make([]string, 3)
+
+for i := 0; i < 3; i++ {
+  data[i] = scanner.Text()
+}
+
+```
+
+- 数字
+  - [][]int
+    - 初期化もforの中でmakeでメモリ確保する必要がある
+  
+```go
+data := make([][]int, 3)
+
+for i := 0; i < 3; i++ {
+  data[i] = make([]int, 3)
+}
+
+```
+
+### データ初期化
+
+- makeでメモリ確保している場合は、インデックス指定で
+
+```
+data := make([]int, 3)
+
+for i := 0; i< 3; i++ {
+  fmt.Scan(&data[i])
+}
 ```
 
 ### sort
