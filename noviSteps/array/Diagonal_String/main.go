@@ -3,18 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var H, W, d int
+	data := make([]string, 3)
 
-	fmt.Scan(&H, &W)
-
-	data := make([][]int, H)
-
-	for i := 0; i < H; i++ {
-		for j := 0; j < W; j++ {
-			fmt.Scan(&d)
-			data[i] = append(data[i], d)
-		}
+	for i := 0; i < 3; i++ {
+		fmt.Scan(&data[i])
 	}
 
-	fmt.Print(data)
+	for i := 0; i < 3; i++ {
+		fmt.Print(string(data[i][i]))
+	}
 }
