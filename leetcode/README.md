@@ -9,15 +9,16 @@ https://docs.google.com/spreadsheets/d/1IsU68j8A3nFHriA39If5tyeYQHQzcITgGZh0xONz
 ### 進め方
 
 - 導入を一旦全てやって全体像
-  - [] 累積和
-  - [] ヒープ
+  - [x] 累積和
   - [] 再帰呼び出し/バックトラック
   - [] 連結リスト
   - [] 二分探索
+    - 基本の実装はできた
   - [] 二分木
   - [] グラフ
   - [] 動的計画法
-
+  - [] ヒープ
+    - いまいち分からんのよな
 
 ### データの操作
 
@@ -25,11 +26,40 @@ https://docs.google.com/spreadsheets/d/1IsU68j8A3nFHriA39If5tyeYQHQzcITgGZh0xONz
   - インデックス [num:num]
   - 二次元ループ: 全探索
 
+### 二分探索実装できちゃった
+
+- binarySeach
+
 ### スライスのインデックス
 
 - a[i:j]
   - j未満
   - ex)a[0:0] は「要素0から0未満までを取り出す」ので、
+
+```
+ackage main
+
+import "fmt"
+
+func main() {
+	aaa := []int{1, 2, 3, 4, 5}
+	fmt.Println(aaa[:3]) // 4がインデックス3で3未満
+	fmt.Println(aaa[3:]) // インデックス3以降
+
+}
+
+[1 2 3]
+[4 5]
+```
+
+- 分割は簡単にできる
+
+```
+	mid := len(arr) / 2
+	left := mergeSort(arr[:mid])
+	right := mergeSort(arr[mid:])
+```
+
 
 ### 文字の扱い stringsメソッド
 
@@ -71,7 +101,7 @@ func main() {
 		 return a[i] < a[j]
 	})
 
-	fmt.Println("Hello, 世界", a)
+	fmt.Println(a)
 }
 
 ```
