@@ -178,11 +178,39 @@ subsequence: 連続 xyzなど
 - dummyは使わない dummy.Nextで使う
 - 数字の繰り上がりなどの計算
 
+### [] 復習LRU Cache
+
+- 大枠はできていたと思う
 
 ### Tree
 
 - LinkdedList
   - left rightがあるバージョン
+
+### Lowest Common Ancestor in Binary Search Tree
+
+- むずいな、なんとなくしかわからない
+  - データの規則性が 左が小さい、右が大きいて決まってるなら やりようはあるけど
+
+### [] Binary Tree Level Order Traversal⭐️
+
+- 新しい階層を作っている
+  - [][]int{} の初期化 && appendの理解不足
+
+#### [] Count Good Nodes in Binary Tree ⭐️
+
+- フラグで 0 1を返して加算してる
+- maxVal は大きかったら更新してる
+
+### backtracking
+
+### [] Combination Sum
+- むずいな！
+  - パターン1
+    - 選ぶ・選ばないパターン!!! 前にも出てた
+      - 選ばないは前のリセットをして
+  - パターン2
+    - return num +再帰関数パターン
 
 
 ### gredy 
